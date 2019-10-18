@@ -8,7 +8,16 @@ const NavBar = () => {
         <button>Login</button>
       </NavLink>
       <NavLink to="/register">
-        <button>register</button>
+        <button>Register</button>
+      </NavLink>
+      <NavLink to="/login">
+        <button
+          onClick={() => {
+            localStorage.removeItem("token");
+          }}
+        >
+          Logout
+        </button>
       </NavLink>
     </div>
   );
