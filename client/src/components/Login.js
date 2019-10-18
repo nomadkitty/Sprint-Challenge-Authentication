@@ -12,7 +12,7 @@ const Login = props => {
   const handleSubmit = event => {
     event.preventDefault();
     axios
-      .post("https//localhost:3300/api/auth/register", user)
+      .post("http://localhost:3300/api/auth/login", user)
       .then(res => {
         localStorage.setItem("token", res.data.token);
         props.history.push("/jokes");

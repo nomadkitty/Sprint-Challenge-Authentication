@@ -6,7 +6,7 @@ import PrivateRoute from "./utils/PrivateRoute.js";
 import NavBar from "./components/NavBar.js";
 import Login from "./components/Login.js";
 import Register from "./components/Register.js";
-// import Jokes from "./components/Jokes.js";
+import Jokes from "./components/Jokes.js";
 
 const App = () => {
   return (
@@ -15,8 +15,8 @@ const App = () => {
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        {/* <PrivateRoute path="/jokes" component={Jokes} /> */}
-        {/* <Redirect from="/" to="/jokes" /> */}
+        <PrivateRoute path="/jokes" component={Jokes} />
+        <Redirect from="/" to="/jokes" />
       </Switch>
     </BrowserRouter>
   );

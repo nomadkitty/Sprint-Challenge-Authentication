@@ -12,7 +12,7 @@ const Register = props => {
   const handleSubmit = event => {
     event.preventDefault();
     axios
-      .post("http//localhost:3300/api/auth/register", user)
+      .post("http://localhost:3300/api/auth/register", user)
       .then(res => {
         props.history.push("/login");
       })
